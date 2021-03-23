@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "955739719704",
+    "project_id": "green-tech-56e84",
+    "storage_bucket": "green-tech-56e84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955739719704:android:df91d785b272d343821b6d",
+        "android_client_info": {
+          "package_name": "com.example.green"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955739719704-ethdhuupka38iq6me05pqn9gaahplp3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA_wnPUZ0F2W13C2lwQ9PkYS52-DXsW2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955739719704-ethdhuupka38iq6me05pqn9gaahplp3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
