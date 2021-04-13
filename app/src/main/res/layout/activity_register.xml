@@ -106,18 +106,18 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:id="@+id/tvlogin"
+        android:id="@+id/tvReg2Login"
         android:gravity="center_horizontal" />
 
-    <ProgressBar
-        android:id="@+id/probar_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/light"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:visibility="invisible"
-        android:layout_marginTop="20dp"/>
+<!--    <ProgressBar-->
+<!--        android:id="@+id/probar_login"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:indeterminate="true"-->
+<!--        android:indeterminateTint="@color/light"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="20dp"/>-->
 
 
 </LinearLayout>

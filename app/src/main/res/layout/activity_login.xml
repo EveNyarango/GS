@@ -43,6 +43,7 @@
         android:layout_height="50dp"
         android:hint="enter password"
         android:textColorHint="@color/light"
+        android:textColor="@color/light"
         android:inputType="textEmailAddress"
         android:layout_margin="10dp"
         android:paddingStart="10dp"
@@ -90,18 +91,18 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:id="@+id/tvRegister1"
+        android:id="@+id/tvLogin2Reg"
         android:gravity="center_horizontal" />
 
-    <ProgressBar
-        android:id="@+id/probar_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/light"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:visibility="invisible"
-        android:layout_marginTop="20dp"/>
+<!--    <ProgressBar-->
+<!--        android:id="@+id/probar_register"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:indeterminate="true"-->
+<!--        android:indeterminateTint="@color/light"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="20dp"/>-->
 
 
 
