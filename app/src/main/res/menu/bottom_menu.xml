@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Profile"
+        android:id="@+id/btmProfile"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+    <item
+        android:title="Ask"
+        android:id="@+id/btmAsk"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_comment_24"/>
+
+    <item
+        android:title="Request"
+        android:id="@+id/btmRequest"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_ask"/>
+
+    <item
+        android:title="Home"
+        android:id="@+id/btmHome"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_home_24"/>
+
+</menu>
