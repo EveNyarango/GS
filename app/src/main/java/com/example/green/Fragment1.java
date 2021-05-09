@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     @Nullable
     CircleImageView IvImage;
     TextView nameTv, profTv, bioTv, emailTv, webTv;
+    ImageButton IvEdit;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
@@ -42,12 +44,19 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         bioTv = getActivity().findViewById(R.id.tvBio_f1);
         emailTv = getActivity().findViewById(R.id.tvEmail_f1);
         webTv = getActivity().findViewById(R.id.tvWebsite_f1);
+        IvEdit = getActivity().findViewById(R.id.btn_edit);
+
+        IvEdit.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.btn_edit:
+                Intent intent = new Intent (getActivity(), UpdateProfileActivity.class);
+                startActivity(intent);
+                break;
 
 
         }
