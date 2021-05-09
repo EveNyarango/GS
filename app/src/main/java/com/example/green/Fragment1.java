@@ -27,7 +27,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     @Nullable
     CircleImageView IvImage;
     TextView nameTv, profTv, bioTv, emailTv, webTv;
-    ImageButton IvEdit;
+    ImageButton IvEdit, btnMenu;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
@@ -45,8 +45,10 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         emailTv = getActivity().findViewById(R.id.tvEmail_f1);
         webTv = getActivity().findViewById(R.id.tvWebsite_f1);
         IvEdit = getActivity().findViewById(R.id.btn_edit);
+        btnMenu = getActivity().findViewById(R.id.btn_menu);
 
         IvEdit.setOnClickListener(this);
+        btnMenu.setOnClickListener(this);
 
     }
 
@@ -56,6 +58,12 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             case R.id.btn_edit:
                 Intent intent = new Intent (getActivity(), UpdateProfileActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.btn_menu:
+                BottomNav bottomNav = new BottomNav();
+                bottomNav.show(getFragmentManager(), "bottomnav");
+
                 break;
 
 

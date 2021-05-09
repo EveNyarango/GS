@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_power"
+            android:drawableLeft="@drawable/ic_baseline_power"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:padding="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_privacy"
+            android:drawableLeft="@drawable/ic_baseline_privacy"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:padding="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_baseline_delete"
+            android:drawableLeft="@drawable/ic_baseline_delete"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:padding="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>
