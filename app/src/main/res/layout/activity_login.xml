@@ -61,7 +61,6 @@
         android:buttonTint="@color/light"
         android:textColor="@color/light"
         android:layout_marginTop="10dp"/>
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
@@ -70,14 +69,6 @@
         android:textSize="18sp"
         android:layout_margin="10dp"
         android:background="@drawable/bg2"/>
-<!--    <Button-->
-<!--        android:id="@+id/btn_signup"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="SIGN UP"-->
-<!--        android:textSize="18sp"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:background="@drawable/bg2"/>-->
 
     <TextView
         android:layout_width="150dp"

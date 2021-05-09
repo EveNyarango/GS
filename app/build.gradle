@@ -13,6 +13,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,4 +47,17 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-core:17.5.1'
     implementation 'com.firebaseui:firebase-ui-database:6.3.0'
+
+    implementation 'com.google.firebase:firebase-firestore:22.1.2'
+    implementation 'com.google.firebase:firebase-storage:19.2.2'
+
+    //    circle imageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+//    Picasso
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+//    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
