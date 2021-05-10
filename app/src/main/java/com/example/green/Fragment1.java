@@ -106,8 +106,17 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
 
                         }else{
-                            Intent intent = new Intent(getActivity(),ProfileActivity.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(getActivity(),ProfileActivity.class);
+//                            startActivity(intent);
+                            try
+                            {
+                                Intent mIntent = new Intent(getActivity(),ProfileActivity.class);
+                                startActivity(mIntent);
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
                         }
 
                     }

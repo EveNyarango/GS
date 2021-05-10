@@ -151,8 +151,16 @@ public class ProfileActivity extends AppCompatActivity {
                                         handler.postDelayed(new Runnable() {
                                             @Override
                                             public void run() {
-                                                Intent intent = new Intent (ProfileActivity.this, Fragment1.class);
-                                                startActivity(intent);
+//                                                Intent intent = new Intent (ProfileActivity.this, Fragment1.class);
+//                                                startActivity(intent);
+                                                try
+                                                {
+                                                    Intent intent = new Intent (ProfileActivity.this, Fragment1.class);
+                                                    startActivity(intent);
+                                                }
+                                                catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
 
                                             }
                                         }, 2000);
