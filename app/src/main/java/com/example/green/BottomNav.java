@@ -46,7 +46,7 @@ public class BottomNav extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = getLayoutInflater().inflate(R.layout.bottom_nav, null);
-        df= FirebaseDatabase.getInstance().getReference("all users");
+        df= FirebaseDatabase.getInstance().getReference("All Users");
 
         cvLogout = view.findViewById(R.id.cvLogout);
         cvPrivacy = view.findViewById(R.id.cvPrivacy);

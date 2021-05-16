@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
-        <activity android:name=".PrivacyActivity"></activity>
+        <activity android:name=".ImageActivity"></activity>
+        <activity android:name=".PrivacyActivity" />
         <activity android:name=".UpdateProfileActivity" />
-        <activity android:name=".ProfileActivity">
-
-        </activity>
+        <activity android:name=".ProfileActivity"></activity>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

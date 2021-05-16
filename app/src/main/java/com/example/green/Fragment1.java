@@ -1,12 +1,14 @@
 package com.example.green;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,6 +51,8 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
         IvEdit.setOnClickListener(this);
         btnMenu.setOnClickListener(this);
+        IvImage.setOnClickListener(this);
+        webTv.setOnClickListener(this);
 
     }
 
@@ -64,6 +68,24 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
                 BottomNav bottomNav = new BottomNav();
                 bottomNav.show(getFragmentManager(), "bottomnav");
 
+                break;
+
+            case R.id.ivProfile_f1:
+                Intent myIntent = new Intent(getActivity(),ImageActivity.class);
+                startActivity(myIntent);
+                break;
+
+            case R.id.tvWebsite_f1:
+                try {
+                    String url = webTv.getText().toString();
+                    Intent intent2 = new Intent(Intent.ACTION_VIEW);
+                    intent2.setData(Uri.parse(url));
+                    startActivity(intent2);
+
+                }catch (Exception e){
+                    Toast.makeText(getActivity(),"Please enter a valid url", Toast.LENGTH_SHORT);
+
+                }
                 break;
 
 
