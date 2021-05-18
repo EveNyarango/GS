@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
-        <activity android:name=".ImageActivity"></activity>
-        <activity android:name=".PrivacyActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".AskActivity" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".ImageActivity" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".UpdateProfileActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

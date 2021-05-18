@@ -2,9 +2,15 @@
   <dictionary name="moringa">
     <words>
       <w>animatorname</w>
+      <w>cdate</w>
+      <w>ctime</w>
+      <w>currentdate</w>
       <w>currentid</w>
+      <w>currenttime</w>
       <w>currentuid</w>
       <w>profes</w>
+      <w>savedate</w>
+      <w>savetime</w>
       <w>tvlogin</w>
     </words>
   </dictionary>
