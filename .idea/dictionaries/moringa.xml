@@ -2,6 +2,8 @@
   <dictionary name="moringa">
     <words>
       <w>animatorname</w>
+      <w>currentid</w>
+      <w>currentuid</w>
       <w>profes</w>
       <w>tvlogin</w>
     </words>

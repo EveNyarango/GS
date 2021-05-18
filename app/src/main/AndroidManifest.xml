@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
         <activity android:name=".ImageActivity"></activity>
-        <activity android:name=".PrivacyActivity" />
+        <activity android:name=".PrivacyActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".ProfileActivity"></activity>
         <activity
