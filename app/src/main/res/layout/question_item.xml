@@ -74,8 +74,12 @@
     android:padding="5dp"/>
 
         <ImageButton
+            android:id="@+id/favourite_item"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_turned_in_not"
+            android:background="@android:color/transparent"
+            android:padding="2dp"/>
 
 
     </LinearLayout>

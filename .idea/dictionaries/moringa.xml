@@ -8,6 +8,9 @@
       <w>currentid</w>
       <w>currenttime</w>
       <w>currentuid</w>
+      <w>favouriteref</w>
+      <w>fvrt</w>
+      <w>fvrtref</w>
       <w>profes</w>
       <w>savedate</w>
       <w>savetime</w>

@@ -20,8 +20,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -35,8 +39,10 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     DocumentReference reference;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference, fvrtref, fvrt_listRef;
+    Boolean fvrtChecker = false;
     RecyclerView recyclerView;
+    QuestionMember member;
 
     @Nullable
     @Override
@@ -56,6 +62,10 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         databaseReference = database.getReference("All Questions");
+        member = new QuestionMember();
+        fvrtref = database.getReference("favourites");
+        fvrt_listRef = database.getReference("favouriteList").child(currentUserid);
+
 
 
         image = getActivity().findViewById(R.id.ivProfile_f2);
@@ -75,7 +85,65 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                     @Override
                     protected void onBindViewHolder(Viewholder_Question holder, int position, @NonNull QuestionMember model) {
 
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        String currentUserid = user.getUid();
+
+                        final String postKey = getRef(position).getKey();
+
                         holder.setitem(getActivity(),model.getName(), model.getUrl(), model.getUserid(), model.getQuestion(), model.getKey(), model.getPrivacy(), model.getTime());
+
+                        String que = getItem(position).getQuestion();
+                        String name = getItem(position).getName();
+                        String url = getItem(position).getUrl();
+                        String time = getItem(position).getTime();
+                        String privacy = getItem(position).getPrivacy();
+                        String userid = getItem(position).getUserid();
+
+                        holder.favouriteChecker(postKey);
+                        holder.favourite.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                fvrtChecker = true;
+
+                                fvrtref.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        if (fvrtChecker.equals(true)){
+                                            if (snapshot.child(postKey).hasChild(currentUserid)){
+                                                fvrtref.child(postKey).child(currentUserid).removeValue();
+                                                delete(time);
+
+                                                fvrtChecker = false;
+
+                                            }else{
+                                              fvrtref.child(postKey).child(currentUserid).setValue(true);
+                                              member.setName(name);
+                                              member.setTime(time);
+                                              member.setPrivacy(privacy);
+                                              member.setUserid(userid);
+                                              member.setQuestion(que);
+
+                                              String id = fvrt_listRef.push().getKey();
+                                              fvrt_listRef.child(id).setValue(member);
+                                              fvrtChecker = false;
+                                            }
+
+                                        }
+
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+
+                                    }
+                                });
+
+                            }
+                        });
+
+
+
 
                     }
 
@@ -91,6 +159,26 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
         recyclerView.setAdapter(firebaseRecyclerAdapter);
         firebaseRecyclerAdapter.startListening();
 
+    }
+
+    void delete(String time){
+        Query query = fvrt_listRef.orderByChild("time").equalTo(time);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot1 : snapshot.getChildren()){
+                    dataSnapshot1.getRef().removeValue();
+
+                    Toast.makeText(getActivity(), "Deleted", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
