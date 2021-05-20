@@ -12,6 +12,7 @@
       <w>savedate</w>
       <w>savetime</w>
       <w>tvlogin</w>
+      <w>viewholder</w>
     </words>
   </dictionary>
 </component>

@@ -2,9 +2,13 @@ package com.example.green;
 
 public class QuestionMember {
 
-    String name, url, userid, question, privacy,time;
+    String name, url, userid, question,key, privacy,time;
     public QuestionMember() {
 
+    }
+
+    public String getKey() {
+        return key;
     }
 
     public String getName() {
