@@ -81,6 +81,7 @@ public class AskActivity extends AppCompatActivity {
                      AllQuestions.child(child).setValue(member);
                      Toast.makeText(AskActivity.this, "Submitted", Toast.LENGTH_SHORT).show();
 
+
                  }else{
                      Toast.makeText(AskActivity.this, "Please ask a question", Toast.LENGTH_SHORT).show();
 

@@ -1,5 +1,6 @@
 package com.example.green;
 
+import android.app.Application;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -32,7 +33,7 @@ public class Viewholder_Question extends RecyclerView.ViewHolder {
         super(itemView);
     }
 
-    public void setitem(FragmentActivity activity, String name, String url, String userid, String question, String key, String privacy, String time){
+    public void setitem(Application activity, String name, String url, String userid, String question, String key, String privacy, String time){
         imageQ = itemView.findViewById(R.id.ivProfile_item);
         time_result = itemView.findViewById(R.id.tvTime_item);
         name_result = itemView.findViewById(R.id.tvName_item);
@@ -71,6 +72,21 @@ public class Viewholder_Question extends RecyclerView.ViewHolder {
         });
 
 
+
+    }
+
+    public void setitemRelated(Application activity, String name, String url, String userid, String question, String key, String privacy, String time){
+        TextView tvNameR = itemView.findViewById(R.id.tvName_RItem);
+        TextView tvTimeR = itemView.findViewById(R.id.tvTime_RItem);
+        TextView tvQueR = itemView.findViewById(R.id.tvQuestion_RItem);
+        TextView tvReplyR = itemView.findViewById(R.id.tvReply_RItem);
+        CircleImageView ivProfileR = itemView.findViewById(R.id.ivProfile_RItem);
+
+
+        Picasso.get().load(url).into(ivProfileR);
+        tvNameR.setText(name);
+        tvTimeR.setText(time);
+        tvQueR.setText(question);
 
     }
 }

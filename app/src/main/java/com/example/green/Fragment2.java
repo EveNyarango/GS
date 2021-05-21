@@ -90,14 +90,14 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
 
                         final String postKey = getRef(position).getKey();
 
-                        holder.setitem(getActivity(),model.getName(), model.getUrl(), model.getUserid(), model.getQuestion(), model.getKey(), model.getPrivacy(), model.getTime());
+                        holder.setitem(requireActivity().getApplication(), model.getName(), model.getUrl(), model.getUserid(), model.getQuestion(), model.getKey(), model.getPrivacy(), model.getTime());
 
-                        String que = getItem(position).getQuestion();
-                        String name = getItem(position).getName();
-                        String url = getItem(position).getUrl();
-                        String time = getItem(position).getTime();
-                        String privacy = getItem(position).getPrivacy();
-                        String userid = getItem(position).getUserid();
+                        final String que = getItem(position).getQuestion();
+                        final String name = getItem(position).getName();
+                        final String url = getItem(position).getUrl();
+                        final String time = getItem(position).getTime();
+                        final String privacy = getItem(position).getPrivacy();
+                        final String userid = getItem(position).getUserid();
 
                         holder.favouriteChecker(postKey);
                         holder.favourite.setOnClickListener(new View.OnClickListener() {
@@ -185,6 +185,10 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ivProfile_f2:
+                BottomSheetF2 bottomSheetF2 = new BottomSheetF2();
+                bottomSheetF2.show(getFragmentManager(), "bottom");
+
+
                 break;
 
             case R.id.floatingActionButton2:

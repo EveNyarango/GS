@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
-        <activity android:name=".AskActivity" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".YourQuestion"></activity>
+        <activity android:name=".Related" />
+        <activity
+            android:name=".AskActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ImageActivity" />
         <activity
             android:name=".PrivacyActivity"
