@@ -23,7 +23,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Viewholder_Question extends RecyclerView.ViewHolder {
 
     CircleImageView imageQ;
-    TextView time_result, name_result, question_result;
+    TextView time_result, name_result, question_result, tvDeleteQ, tvReplyQ;
     ImageButton favourite;
     DatabaseReference favouriteref;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -38,6 +38,7 @@ public class Viewholder_Question extends RecyclerView.ViewHolder {
         time_result = itemView.findViewById(R.id.tvTime_item);
         name_result = itemView.findViewById(R.id.tvName_item);
         question_result = itemView.findViewById(R.id.tvQuestion_item);
+        tvReplyQ = itemView.findViewById(R.id.tvReply_item);
 
         Picasso.get().load(url).into(imageQ);
         time_result.setText(time);
@@ -87,6 +88,21 @@ public class Viewholder_Question extends RecyclerView.ViewHolder {
         tvNameR.setText(name);
         tvTimeR.setText(time);
         tvQueR.setText(question);
+
+    }
+
+    public void setitemDelete(Application activity, String name, String url, String userid, String question, String key, String privacy, String time){
+        TextView tvNameQ = itemView.findViewById(R.id.tvName_Question);
+        TextView tvTimeQ = itemView.findViewById(R.id.tvTime_Question);
+        TextView tvQueQ = itemView.findViewById(R.id.tvQuestion_Question);
+        tvDeleteQ = itemView.findViewById(R.id.tvDelete_Question);
+        CircleImageView ivProfileQ = itemView.findViewById(R.id.ivProfile_Question);
+
+
+        Picasso.get().load(url).into(ivProfileQ);
+        tvNameQ.setText(name);
+        tvTimeQ.setText(time);
+        tvQueQ.setText(question);
 
     }
 }

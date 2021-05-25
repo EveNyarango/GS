@@ -99,6 +99,18 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                         final String privacy = getItem(position).getPrivacy();
                         final String userid = getItem(position).getUserid();
 
+                        holder.tvReplyQ.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(getActivity(),ReplyActivity.class);
+                                intent.putExtra("uid", userid);
+                                intent.putExtra("q",que);
+                                intent.putExtra("postkey", postKey);
+                                intent.putExtra("key", privacy);
+                                startActivity(intent);
+                            }
+                        });
+
                         holder.favouriteChecker(postKey);
                         holder.favourite.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -156,8 +168,10 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                         return new Viewholder_Question(view);
                     }
                 };
+
         recyclerView.setAdapter(firebaseRecyclerAdapter);
         firebaseRecyclerAdapter.startListening();
+        
 
     }
 

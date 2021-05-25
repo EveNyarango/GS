@@ -84,12 +84,5 @@ public class Related extends AppCompatActivity {
         firebaseRecyclerAdapter.startListening();
 
 
-
-
-
-
-
-
-
     }
 }
