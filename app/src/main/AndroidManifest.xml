@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
-        <activity android:name=".ReplyActivity"></activity>
+        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".ReplyActivity" />
         <activity android:name=".YourQuestion" />
         <activity android:name=".Related" />
         <activity

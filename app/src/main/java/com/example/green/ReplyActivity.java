@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -48,7 +49,7 @@ public class ReplyActivity extends AppCompatActivity {
             uid = extra.getString("uid");
             post_key = extra.getString("postkey");
             question = extra.getString("q");
-            key = extra.getString("key");
+//            key = extra.getString("key");
 
         }else{
             Toast.makeText(this, "Opps", Toast.LENGTH_SHORT).show();
@@ -64,8 +65,12 @@ public class ReplyActivity extends AppCompatActivity {
         tvReplyUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                Intent intent = new Intent(ReplyActivity.this,AnswerActivity.class);
+                intent.putExtra("u", uid);
+//                intent.putExtra("q",question);
+                intent.putExtra("p", post_key);
+//                                intent.putExtra("key", privacy);
+                startActivity(intent);
             }
         });
     }

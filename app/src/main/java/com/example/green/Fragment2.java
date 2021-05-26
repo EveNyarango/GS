@@ -106,7 +106,7 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                                 intent.putExtra("uid", userid);
                                 intent.putExtra("q",que);
                                 intent.putExtra("postkey", postKey);
-                                intent.putExtra("key", privacy);
+//                                intent.putExtra("key", privacy);
                                 startActivity(intent);
                             }
                         });
@@ -135,8 +135,8 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
                                               member.setUserid(userid);
                                               member.setQuestion(que);
 
-                                              String id = fvrt_listRef.push().getKey();
-                                              fvrt_listRef.child(id).setValue(member);
+//                                              String id = fvrt_listRef.push().getKey();
+                                              fvrt_listRef.child(postKey).setValue(member);
                                               fvrtChecker = false;
                                             }
 
