@@ -71,6 +71,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReply"
             android:layout_width="300dp"
             android:layout_height="600dp"
             android:layout_gravity="right"

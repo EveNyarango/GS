@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="2dp"
+    app:cardBackgroundColor="@color/lighter"
+    android:layout_height="wrap_content"
+    tools:context=".ansActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile_ans"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/profile"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tvName_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Name"
+                android:paddingStart="3dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvTime_ans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light"
+                android:textAlignment="viewEnd"
+                android:text="Time"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:textSize="8sp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvAnswer_ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_marginLeft="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvLike_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:drawableStart="@drawable/ic_baseline_thumb_up"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/light"
+                android:clickable="true"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvVotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Votes"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/light"
+                android:clickable="true"
+                android:padding="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>

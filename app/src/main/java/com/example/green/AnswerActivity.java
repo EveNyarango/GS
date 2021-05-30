@@ -85,7 +85,7 @@ public class AnswerActivity extends AppCompatActivity {
             Allquestions.child(id).setValue(member);
             Toast.makeText(this, "Submitted", Toast.LENGTH_SHORT).show();
 
-//            Intent intent = new Intent(AnswerActivity.this,AskActivity.class);
+//            Intent intent = new Intent(AnswerActivity.this,Fragment2.class);
 //            startActivity(intent);
 
         }else {
