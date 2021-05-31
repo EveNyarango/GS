@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,14 +60,25 @@ public class Related extends AppCompatActivity {
 
                         holder.setitemRelated(getApplication(),model.getName(), model.getUrl(), model.getUserid(), model.getQuestion(), model.getKey(), model.getPrivacy(), model.getTime());
 
-//                        String que = getItem(position).getQuestion();
+                        String que = getItem(position).getQuestion();
 //                        String name = getItem(position).getName();
 //                        String url = getItem(position).getUrl();
 //                        String time = getItem(position).getTime();
 //                        String privacy = getItem(position).getPrivacy();
-//                        String userid = getItem(position).getUserid();
-//
+                        String userid = getItem(position).getUserid();
 //                        holder.favouriteChecker(postKey);
+
+                        holder.tvReplyR.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Related.this,ReplyActivity.class);
+                                intent.putExtra("uid", userid);
+                                intent.putExtra("q",que);
+                                intent.putExtra("postkey", postKey);
+                                startActivity(intent);
+
+                            }
+                        });
 
 
                     }

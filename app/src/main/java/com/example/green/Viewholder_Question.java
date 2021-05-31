@@ -23,7 +23,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Viewholder_Question extends RecyclerView.ViewHolder {
 
     CircleImageView imageQ;
-    TextView time_result, name_result, question_result, tvDeleteQ, tvReplyQ;
+    TextView time_result, name_result, question_result, tvDeleteQ, tvReplyQ,tvReplyR;
     ImageButton favourite;
     DatabaseReference favouriteref;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -80,7 +80,7 @@ public class Viewholder_Question extends RecyclerView.ViewHolder {
         TextView tvNameR = itemView.findViewById(R.id.tvName_RItem);
         TextView tvTimeR = itemView.findViewById(R.id.tvTime_RItem);
         TextView tvQueR = itemView.findViewById(R.id.tvQuestion_RItem);
-        TextView tvReplyR = itemView.findViewById(R.id.tvReply_RItem);
+        tvReplyR = itemView.findViewById(R.id.tvReply_RItem);
         CircleImageView ivProfileR = itemView.findViewById(R.id.ivProfile_RItem);
 
 

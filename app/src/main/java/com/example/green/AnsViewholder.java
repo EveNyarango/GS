@@ -38,7 +38,7 @@ public class AnsViewholder extends RecyclerView.ViewHolder {
         tvTimeAns = itemView.findViewById(R.id.tvTime_ans);
 
 
-        tvTimeAns.setText(name);
+        tvNameAns.setText(name);
         tvTimeAns.setText(time);
         tvAnswerAns.setText(answer);
         Picasso.get().load(url).into(ivProfileAns);
