@@ -60,4 +60,13 @@ dependencies {
 
 //    implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.multidex:multidex:2.0.1'
+
+//    exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.2'
+
 }
