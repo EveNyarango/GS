@@ -1,11 +1,13 @@
 package com.example.green;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -89,15 +91,22 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 
 
 //                        final String que = getItem(position).getQuestion();
-//                        final String name = getItem(position).getName();
-//                        final String url = getItem(position).getUrl();
-//                        final String time = getItem(position).getTime();
+                        final String name = getItem(position).getName();
+                        final String url = getItem(position).getUrl();
+                        final String time = getItem(position).getTime();
 //                        final String privacy = getItem(position).getPrivacy();
-//                        final String userid = getItem(position).getUserid();
+                        final String userid = getItem(position).getUid();
 
 
 
                         holder.likesChecker(postKey);
+                        holder.btnMore.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                showDialog(name, url, time,userid);
+
+                            }
+                        });
                         holder.btnLike.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -115,8 +124,6 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 
                                             }else{
                                                 likeref.child(postKey).child(currentUserid).setValue(true);
-
-
                                                 likeref.child(postKey).setValue(true);
                                                 likeChecker = false;
                                             }
@@ -149,7 +156,25 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
                         return new PostViewholder(view);
                     }
                 };
-        recyclerView.setAdapter(firebaseRecyclerAdapter);
+
         firebaseRecyclerAdapter.startListening();
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
+    }
+    void showDialog(String name, String url, String time, String userid){
+
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View view = inflater.inflate(R.layout.post_options, null);
+        TextView download = view.findViewById(R.id.tvDownload_post);
+        TextView share = view.findViewById(R.id.tvShare_post);
+        TextView delete = view.findViewById(R.id.tvDelete_post);
+        TextView copyurl = view.findViewById(R.id.tvCopyUrl_post);
+
+
+        AlertDialog alertDialog = new AlertDialog.Builder(getActivity())
+                .setView(view)
+                .create();
+        alertDialog.show();
+
+
     }
 }

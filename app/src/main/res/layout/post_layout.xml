@@ -82,6 +82,7 @@
                 app:use_controller="true"
                 app:show_timeout="1000"
                 android:visibility="visible"
+                app:controller_layout_id="@layout/custom_exoplayer"
                 app:resize_mode="fill"
                 tools:ignore="MissingConstraints"/>
 

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:padding="2dp"
     android:orientation="vertical">
 
     <Button
@@ -20,8 +20,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPost_f4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="3dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 
