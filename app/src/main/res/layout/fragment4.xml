@@ -17,6 +17,12 @@
         android:textStyle="bold"
         android:layout_margin="4dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPost_f4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"></androidx.recyclerview.widget.RecyclerView>
+
 
 
 </LinearLayout>

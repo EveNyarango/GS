@@ -138,6 +138,8 @@ public class Fragment2 extends Fragment implements View.OnClickListener {
 //                                              String id = fvrt_listRef.push().getKey();
                                               fvrt_listRef.child(postKey).setValue(member);
                                               fvrtChecker = false;
+
+                                              Toast.makeText(getActivity(), "Added to favourite", Toast.LENGTH_SHORT).show();
                                             }
 
                                         }

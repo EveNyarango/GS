@@ -4,7 +4,7 @@ public class PostMember {
 
 
 
-    String name, url, postUri,time, uid, type,desc;
+    String name, url, postUri, time, uid, type, desc;
 
     public PostMember() {
 
