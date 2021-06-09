@@ -28,7 +28,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Fragment1 extends Fragment implements View.OnClickListener{
     @Nullable
     CircleImageView IvImage;
-    TextView nameTv, profTv, bioTv, emailTv, webTv;
+    TextView nameTv, profTv, bioTv, emailTv, webTv, tvPost;
     ImageButton IvEdit, btnMenu;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -48,11 +48,13 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         webTv = getActivity().findViewById(R.id.tvWebsite_f1);
         IvEdit = getActivity().findViewById(R.id.btn_edit);
         btnMenu = getActivity().findViewById(R.id.btn_menu);
+        tvPost = getActivity().findViewById(R.id.tvPost_f1);
 
         IvEdit.setOnClickListener(this);
         btnMenu.setOnClickListener(this);
         IvImage.setOnClickListener(this);
         webTv.setOnClickListener(this);
+        tvPost.setOnClickListener(this);
 
     }
 
@@ -73,6 +75,11 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             case R.id.ivProfile_f1:
                 Intent myIntent = new Intent(getActivity(),ImageActivity.class);
                 startActivity(myIntent);
+                break;
+
+            case R.id.tvPost_f1:
+                Intent myIntent3 = new Intent(getActivity(), PersonalPost.class);
+                startActivity(myIntent3);
                 break;
 
             case R.id.tvWebsite_f1:
