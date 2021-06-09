@@ -38,7 +38,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     RecyclerView recyclerView;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference reference, likeref, db1, db2, db3;
-    Boolean likeChecker;
+    Boolean likeChecker = false;
 
 //    DatabaseReference db1, db2, db3;
 
@@ -140,7 +140,6 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 
                                             }else{
                                                 likeref.child(postKey).child(currentUserid).setValue(true);
-                                                likeref.child(postKey).setValue(true);
                                                 likeChecker = false;
                                             }
 
