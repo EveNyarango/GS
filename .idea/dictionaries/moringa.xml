@@ -10,14 +10,17 @@
       <w>currentid</w>
       <w>currenttime</w>
       <w>currentuid</w>
+      <w>dowloading</w>
       <w>favouriteref</w>
       <w>fvrt</w>
       <w>fvrtref</w>
+      <w>likeref</w>
       <w>likescount</w>
       <w>postkey</w>
       <w>profes</w>
       <w>savedate</w>
       <w>savetime</w>
+      <w>sharetext</w>
       <w>tvlogin</w>
       <w>viewholder</w>
       <w>votesref</w>

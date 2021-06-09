@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.exoplayer2.ExoPlaybackException;
+import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
@@ -43,6 +44,7 @@ public class PostViewholder extends RecyclerView.ViewHolder {
     ImageView ivPost;
     TextView tvName,tvTime, tvCaption, tvLikes, tvComments;
     ImageButton btnLike, btnComments, btnMore;
+    ExoPlayer player;
     DatabaseReference likesRef;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
