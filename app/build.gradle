@@ -69,4 +69,7 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.2'
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.2'
 
+//    permission
+    implementation 'gun0912.ted:tedpermission:2.2.2'
+
 }
