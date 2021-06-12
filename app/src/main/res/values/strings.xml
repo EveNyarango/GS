@@ -2,6 +2,6 @@
     <string name="app_name">Green</string>
     <string name="title_activity_personal_post">PersonalPostActivity</string>
     <string name="tab_text_1">Photos</string>
-    <string name="tab_text_2">Video</string>
+    <string name="tab_text_2">Videos</string>
     <string name="tab_text_3">Stories</string>
 </resources>

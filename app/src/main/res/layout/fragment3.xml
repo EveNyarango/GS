@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lighter">
 
     <TextView
+        android:id="@+id/tvRequest_f3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Request"
-        android:textSize="50sp"
-        />
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"/>
 
-</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRequest_f3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find People"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfile_f3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

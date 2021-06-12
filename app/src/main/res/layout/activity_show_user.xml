@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ImageIv_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white">
+
+        <TextView
+            android:id="@+id/prof_showUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Profile"
+            android:textColor="@color/light"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile_showUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="8dp"
+            android:src="@drawable/profile"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llFollowers"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvNoFollowers_showUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/tvFollowers_showUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvNoPost_showUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/tvPost_showUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Followers"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFollow_showUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="Follow"
+                    android:padding="5dp"
+                    android:background="@drawable/bg1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvName_f1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="2dp"-->
+<!--                android:text="name"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="25sp"/>-->
+<!--            -->
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Primary Details"
+        android:background="@color/light"
+        android:padding="5dp"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:gravity="start"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:id="@+id/tvName_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+
+    <TableRow
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Profession"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:id="@+id/tvProf_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profession"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+
+    <TableRow
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Bio"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:id="@+id/tvBio_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bio"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+
+    <TableRow
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Email"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:id="@+id/tvEmail_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+
+    <TableRow
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:id="@+id/tvWebsite_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:clickable="true"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+
+    <TableRow
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvRequest_showUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account is private. Request to view profile"
+        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:textColor="@color/light"
+        android:textStyle="bold"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp" />
+</LinearLayout>

@@ -4,6 +4,7 @@
       <w>allquestions</w>
       <w>animatorname</w>
       <w>cdate</w>
+      <w>chatprofile</w>
       <w>copyurl</w>
       <w>ctime</w>
       <w>currentdate</w>
@@ -12,16 +13,23 @@
       <w>currentuid</w>
       <w>dowloading</w>
       <w>favouriteref</w>
+      <w>followercount</w>
       <w>fvrt</w>
       <w>fvrtref</w>
       <w>likeref</w>
       <w>likescount</w>
       <w>postkey</w>
+      <w>postno</w>
+      <w>postnoref</w>
       <w>profes</w>
+      <w>professionreq</w>
+      <w>requestref</w>
       <w>savedate</w>
       <w>savetime</w>
       <w>sharetext</w>
       <w>tvlogin</w>
+      <w>uidreq</w>
+      <w>urlreq</w>
       <w>viewholder</w>
       <w>votesref</w>
     </words>

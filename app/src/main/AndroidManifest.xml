@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.green" >
+    package="com.example.green">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -12,12 +12,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Green" >
+        android:theme="@style/Theme.Green">
+        <activity android:name=".ShowUser"></activity>
+        <activity android:name=".ChatActivity" />
         <activity
             android:name=".PersonalPost"
             android:label="@string/title_activity_personal_post"
-            android:theme="@style/Theme.Green.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.Green.NoActionBar" />
         <activity android:name=".PostActivity" />
         <activity android:name=".ansActivity" />
         <activity android:name=".AnswerActivity" />
@@ -35,7 +36,7 @@
         <activity android:name=".ProfileActivity" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
