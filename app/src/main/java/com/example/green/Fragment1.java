@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,8 +29,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Fragment1 extends Fragment implements View.OnClickListener{
     @Nullable
     CircleImageView IvImage;
-    TextView nameTv, profTv, bioTv, emailTv, webTv, tvPost;
+    TextView nameTv, profTv, bioTv, emailTv, webTv, tvPost, tvFollower;
     ImageButton IvEdit, btnMenu;
+    Button btnMessage1;
+    String url, userid;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
@@ -47,14 +50,17 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         emailTv = getActivity().findViewById(R.id.tvEmail_f1);
         webTv = getActivity().findViewById(R.id.tvWebsite_f1);
         IvEdit = getActivity().findViewById(R.id.btn_edit);
+        tvFollower =getActivity().findViewById(R.id.tvFollowers_f1);
         btnMenu = getActivity().findViewById(R.id.btn_menu);
         tvPost = getActivity().findViewById(R.id.tvPost_f1);
+        btnMessage1 = getActivity().findViewById(R.id.btn_Message_f1);
 
         IvEdit.setOnClickListener(this);
         btnMenu.setOnClickListener(this);
         IvImage.setOnClickListener(this);
         webTv.setOnClickListener(this);
         tvPost.setOnClickListener(this);
+        btnMessage1.setOnClickListener(this);
 
     }
 
@@ -80,6 +86,17 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             case R.id.tvPost_f1:
                 Intent myIntent3 = new Intent(getActivity(), PersonalPost.class);
                 startActivity(myIntent3);
+                break;
+
+            case R.id.btn_Message_f1:
+                Intent myIntent4 = new Intent(getActivity(), ChatActivity.class);
+                startActivity(myIntent4);
+                break;
+            case R.id.tvFollowers_f1:
+                Intent follower = new Intent(getActivity(),FollowersActivity.class);
+                follower.putExtra("u",userid);
+                startActivity(follower);
+
                 break;
 
             case R.id.tvWebsite_f1:

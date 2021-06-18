@@ -102,7 +102,7 @@
                     android:id="@+id/tvPost_showUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Followers"
+                    android:text="Post"
                     android:textColor="@color/black"
                     android:padding="5dp"
                     android:clickable="true"
@@ -360,4 +360,14 @@
         android:drawablePadding="20dp"
         android:paddingStart="20dp"
         android:paddingLeft="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:background="@drawable/bg2"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:id="@+id/btnSendmessage_showuser"/>
 </LinearLayout>

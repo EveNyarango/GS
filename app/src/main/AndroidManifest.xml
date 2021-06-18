@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Green">
-        <activity android:name=".ShowUser"></activity>
+        <activity android:name=".FollowersActivity"></activity>
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".ShowUser" />
         <activity android:name=".ChatActivity" />
         <activity
             android:name=".PersonalPost"
