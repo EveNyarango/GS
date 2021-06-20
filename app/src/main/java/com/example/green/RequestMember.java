@@ -9,6 +9,7 @@ public class RequestMember {
     String email;
     String followers;
     String website;
+
     String userid;
 
     public RequestMember() {
@@ -80,10 +81,12 @@ public class RequestMember {
     }
 
     public String getUserid() {
+
         return userid;
     }
 
     public void setUserid(String userid) {
+
         this.userid = userid;
     }
 

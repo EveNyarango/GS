@@ -3,6 +3,7 @@ package com.example.green;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,7 +38,7 @@ public class ShowUser extends AppCompatActivity {
     TextView tvName, tvProf, tvBio, tvEmail, tvWebsite, tvRequest, tvNoFollowers, tvNoPost;
     CircleImageView ivProfile;
     TextView btnFollow, tvFollowers, tvPost;
-    LinearLayout llFollowers, llPost;
+    CardView cvFollowers, cvPost;
     Button btnSendMessage;
     FirebaseDatabase database;
     DatabaseReference databaseReference, databaseReference1, databaseReference2, postnoref, requestref, db1, db2;
@@ -61,6 +62,8 @@ public class ShowUser extends AppCompatActivity {
         setContentView(R.layout.activity_show_user);
 
         database = FirebaseDatabase.getInstance();
+        requestMember = new RequestMember();
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String currentUserId = user.getUid();
 
@@ -76,11 +79,11 @@ public class ShowUser extends AppCompatActivity {
         tvNoFollowers = findViewById(R.id.tvNoFollowers_showUser);
         tvNoPost = findViewById(R.id.tvNoPost_showUser);
         tvRequest = findViewById(R.id.tvRequest_showUser);
-        btnSendMessage = findViewById(R.id.btnSendmessage_showuser);
+        btnSendMessage = findViewById(R.id.btnSendMessage_showUser);
 
 
-        llFollowers = findViewById(R.id.llFollowers);
-        llPost = findViewById(R.id.llPost);
+        cvFollowers = findViewById(R.id.cvFollowers);
+        cvPost = findViewById(R.id.cvPost);
 
         Bundle extras = getIntent().getExtras();
         if(extras != null){
@@ -114,7 +117,7 @@ public class ShowUser extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 postNo = (int) snapshot.getChildrenCount();
-                tvPost.setText(Integer.toString(postNo));
+//                tvPost.setText(Integer.toString(postNo));
             }
 
             @Override
@@ -137,7 +140,7 @@ public class ShowUser extends AppCompatActivity {
                 }
             }
         });
-        tvFollowers.setOnClickListener(new View.OnClickListener() {
+        tvNoFollowers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ShowUser.this,FollowersActivity.class);
@@ -257,7 +260,7 @@ public class ShowUser extends AppCompatActivity {
 
                 if(snapshot.exists()){
                     followercount = (int) snapshot.getChildrenCount();
-                    tvFollowers.setText(Integer.toString(followercount));
+                    tvNoFollowers.setText(Integer.toString(followercount));
                 }
             }
 
@@ -271,7 +274,7 @@ public class ShowUser extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.hasChild(currentUserId)){
-                    btnSendMessage.setText("Requested");
+                    btnFollow.setText("Requested");
 
                 }
 
@@ -287,7 +290,7 @@ public class ShowUser extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.child(userid).hasChild(currentUserId)){
-                    btnSendMessage.setText("Following");
+                    btnFollow.setText("Following");
                 }else{
 
                 }
@@ -306,14 +309,14 @@ public class ShowUser extends AppCompatActivity {
         String currentUserId = user.getUid();
 
         if (p.equals("Public")) {
-            btnSendMessage.setText("Following");
+            btnFollow.setText("Following");
             requestMember.setUserid(currentUserId);
             requestMember.setProfession(professionreq);
             requestMember.setUrl(urlreq);
             requestMember.setName(namereq);
             databaseReference1.child(currentUserId).setValue(requestMember);
         }else{
-            btnSendMessage.setText("Requested");
+            btnFollow.setText("Requested");
             requestMember.setUserid(currentUserId);
             requestMember.setProfession(professionreq);
             requestMember.setUrl(urlreq);
@@ -335,8 +338,8 @@ public class ShowUser extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         databaseReference1.child(currentUserId).removeValue();
-                        btnSendMessage.setText("Follow");
-                        tvFollowers.setText("0");
+                        btnFollow.setText("Follow");
+                        tvNoFollowers.setText("0");
                         Toast.makeText(ShowUser.this, "Unfollowed", Toast.LENGTH_SHORT).show();
                     }
                 })
